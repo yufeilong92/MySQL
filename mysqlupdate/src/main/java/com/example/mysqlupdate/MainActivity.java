@@ -16,8 +16,12 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
-
-
+/**
+ * 定义个类继承sqlliteopenhelper
+ * sqliteDatabase:操作数据库
+ *  oncreate方法：当数据库第一次被调用时，特别适合做表结构的初始化
+ *  onupgeade方法：当数据库版本进行更新是调用
+*/
 public class MainActivity extends AppCompatActivity {
 
     private MyOpenHelper myOpenHelper;
@@ -33,8 +37,9 @@ public class MainActivity extends AppCompatActivity {
         myOpenHelper = new MyOpenHelper(getApplicationContext());
 //    1               用来存list集合来存javabean
         lists = new ArrayList<Person>();
-
-
+/**
+ * 拿到数据库
+*/
 //       创建或打开数据库
         SQLiteDatabase writableDatabase = myOpenHelper.getWritableDatabase();
 
