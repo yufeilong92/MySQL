@@ -98,7 +98,9 @@ public class MainActivity extends AppCompatActivity {
 //    又返回记录
 //            查询的类
 //           db.query("info",null)
-
+/*
+ （表名，查询条件，条件，null,null,null）
+*/
 //            db.query("info",new String[]{"phone"},"name=?",new String[]{"王五"},null,null,null);
         db.query("info", null, null, null, null, null, null);
         Cursor cursor = db.rawQuery("select * from info", null);
